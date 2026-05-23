@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Blind Navigation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🦯 AI Smart Blind Navigation System</h1>
+            <p>Real-time obstacle detection using AI | Voice Feedback</p>
+        </header>
+
+        <div class="main-content">
+            <div class="video-section">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+                <div class="status-overlay" id="statusOverlay">
+                    <span id="statusText">Loading AI Model...</span>
+                </div>
+            </div>
+
+            <div class="controls-panel">
+                <button id="startBtn" class="btn btn-primary">▶ Start Navigation</button>
+                <button id="stopBtn" class="btn btn-danger" disabled>⏹ Stop</button>
+                <button id="voiceToggle" class="btn btn-secondary">🔊 Voice: ON</button>
+            </div>
+
+            <div class="info-panel">
+                <h3>📡 Detected Obstacles</h3>
+                <div id="detectionList" class="detection-list">
+                    <p>No obstacles detected</p>
+                </div>
+
+                <h3>⚠ Alert Level</h3>
+                <div id="alertIndicator" class="alert-safe">
+                    <span>🟢 SAFE</span>
+                </div>
+
+                <h3>🗣 Last Voice Alert</h3>
+                <div id="voiceLog" class="voice-log">
+                    <p>Waiting...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>GM University, Davangere | Dept. of CY & IY | AI Based Smart Blind Navigation</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
